@@ -12,6 +12,7 @@ interface SearchComponentProps {
 export default function Search(props: SearchComponentProps) {
     const handleSearch = async () => {
         const response = await getResults(props.searchTerm);
+        console.log("Response: ", response);
         props.setResults(response.HITS);
     }
 
